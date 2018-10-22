@@ -1,4 +1,4 @@
-#$HADOOP_HOME/sbin/stop-all.sh
+$HADOOP_HOME/sbin/stop-all.sh
 while read h; do
 	if [ -z "$h" ]; then continue; fi
 	hn=`echo $h | cut -d ' ' -f2`
