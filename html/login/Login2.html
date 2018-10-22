@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cloudoop</title>
+
+<style>
+	body {background-color: white}
+	.box {height: 260px; margin: 50px 50px; text-align: center; padding: 300px 0; box-shadow: 5px 5px 50px 2px; background-image:url(cd.jpg); background-repeat: no-repeat; background-position: center; background-size: 260px;}
+	.cloudoop {margin: auto;}
+	span {
+    display: none;
+  }
+	</style>
+</head>
+
+<body>
+<div class="box">
+	<div class="cloudoop">CLOUDOOP</div>
+	<table id= "areaLogin">
+		<p><input type="text" size="12" maxlength="12" id="id" value=""> <span>아이디</span></p>
+	    <p><input type="password" size="12" maxlength="12" id="pw" value="" onKeyUp="onKeyupPasswd(event)"> <span>패스워드</span></p>
+		<input type="button" onclick="Login()" value="로그인">
+	</table>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+  $( "input" ).focus(function() {
+  $( this ).next( "span" ).css( "display", "inline" ).fadeOut( 3000 );
+});
+</script>
+<script type="text/javascript">
+	function Login(){
+           var objLogin = document.getElementById("id");
+           var objPasswd = document.getElementById("pw");
+
+           if(objLogin.value == ""){
+               alert("아이디를 입력하세요..!!");
+               objLogin.focus();
+               return ;
+           }
+           else if(objPasswd.value == ""){
+               alert("비밀번호를 입력하세요..!!");
+               objPasswd.focus();
+               return ;
+           }
+	         // 서버에서 정상적으로 로그인 되었다는 응답이 왔을 경우
+            document.getElementById("areaLogin").style.display = "none";
+
+            var objLoginInfo = document.getElementById("loginInfo");
+            objLoginInfo.innerHTML = objLogin.value + "님 로그인 되었습니다..!!";
+
+        }
+/* function fnLogout(){
+            document.getElementById("loginId").value = "";
+            document.getElementById("passwd").value = "";
+
+            document.getElementById("areaLogin").style.display = "";
+            document.getElementById("areaLogout").style.display = "none";
+        }   */ // end function fnLogout()
+
+
+ </script>
+</body>
+</html>
