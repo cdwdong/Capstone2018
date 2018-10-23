@@ -3,7 +3,7 @@ sudo mkdir -p /opt/hadoop/
 sudo chown -Rh capproject /opt/hadoop_tmp/
 sudo chown -Rh capproject /opt/hadoop/
 
-enviovar=/home/capproject/.bashrc
+enviovar=~/.bashrc
 if ! grep -q "export HADOOP_HOME=/opt/hadoop/hadoop" $enviovar; then
 	echo "export HADOOP_HOME=/opt/hadoop/hadoop" >> $enviovar
 	echo 'export PATH=$PATH:$HADOOP_HOME/bin' >> $enviovar
@@ -35,7 +35,7 @@ while [ true ]; do
 		echo ">>>> enter yes or no"
 	fi
 done
-envsh=$HADOOP_HOME/etc/hadoop/hadoop-env.sh
+envsh="$HADOOP_HOME/etc/hadoop/hadoop-env.sh"
 jenv="export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre"
 if [ -f $envsh ] & ! grep -q "$jenv" "$envsh"; then
 echo "$jenv" >> $envsh
