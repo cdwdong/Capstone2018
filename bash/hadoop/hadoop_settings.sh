@@ -35,7 +35,7 @@ while [ true ]; do
 		echo ">>>> enter yes or no"
 	fi
 done
-envsh=$HADOOP_HOME/etc/hadoop/hadoop-env.sh
+envsh="$HADOOP_HOME/etc/hadoop/hadoop-env.sh"
 jenv="export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre"
 if [ -f $envsh ] & ! grep -q "$jenv" "$envsh"; then
 echo "$jenv" >> $envsh
