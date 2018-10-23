@@ -3,7 +3,7 @@ sudo mkdir -p /opt/hadoop/
 sudo chown -Rh capproject /opt/hadoop_tmp/
 sudo chown -Rh capproject /opt/hadoop/
 
-enviovar=/home/capproject/.bashrc
+enviovar=~/.bashrc
 if ! grep -q "export HADOOP_HOME=/opt/hadoop/hadoop" $enviovar; then
 	echo "export HADOOP_HOME=/opt/hadoop/hadoop" >> $enviovar
 	echo 'export PATH=$PATH:$HADOOP_HOME/bin' >> $enviovar
