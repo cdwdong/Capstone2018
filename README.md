@@ -8,7 +8,6 @@
 
 # 담당 파트 #
 - Hadoop을 관리하기 위한 bash script 코딩
-- Hadoop과 php 사이의 인터페이스
 
 # 관련 내용 #
 
