@@ -15,4 +15,3 @@
 ![02.jpg](mdImage/02.jpg)
 ![03.jpg](mdImage/03.jpg)
 ![04.jpg](mdImage/04.jpg)
-![05.jpg](mdImage/05.jpg)
